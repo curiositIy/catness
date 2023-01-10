@@ -9,9 +9,9 @@ intents.message_content = True
 
 
 class Client(commands.Bot):
-	def __init__(self):
-		super().__init__(intents=discord.Intents.all(), command_prefix=prefix)
-		self.command_prefix = prefix
+    def __init__(self):
+        super().__init__(intents=intents, command_prefix=prefix)
+        self.command_prefix = prefix
 
 
 ce = Client()
@@ -19,9 +19,9 @@ ce = Client()
 
 async def load():
 
-	await ce.load_extension('jishaku')
-	await ce.load_extension('Cogs.events')
-	print('🟪 initial extensions loaded')
+    await ce.load_extension("jishaku")
+    await ce.load_extension("Cogs.events")
+    print("🟪 initial extensions loaded")
 
 
 asyncio.run(load())
