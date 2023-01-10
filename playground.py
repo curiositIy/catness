@@ -1,17 +1,21 @@
-import os
 import asyncio
+
+import toml
 from discord.ext import commands
+
 from sakana import *
 
 intents.members = True
 intents.presences = True
 intents.message_content = True
 
+config = toml.load("config.toml")
+
 
 class Bot(commands.Bot):
     def __init__(self):
-        super().__init__(intents=intents, command_prefix=prefix)
-        self.command_prefix = prefix
+        super().__init__(command_prefix=prefix, intents=intents)
+        self.config = config
 
 
 ce = Bot()
@@ -25,4 +29,4 @@ async def load():
 
 
 asyncio.run(load())
-ce.run(TOKEN, log_handler=None)
+ce.run(config["token"], log_handler=None)
