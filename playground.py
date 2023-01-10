@@ -8,13 +8,13 @@ intents.presences = True
 intents.message_content = True
 
 
-class Client(commands.Bot):
+class Bot(commands.Bot):
     def __init__(self):
         super().__init__(intents=intents, command_prefix=prefix)
         self.command_prefix = prefix
 
 
-ce = Client()
+ce = Bot()
 
 
 async def load():
