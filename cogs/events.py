@@ -24,6 +24,7 @@ class Events(commands.Cog):
         return string.replace("\\", ".")[:-3]
 
     async def setup_hook(self):
+        # note from liz: cogs don't have a 'setup_hook' so this is never getting called unless you yourself call it.
         await self.tree.sync(guild=discord.Object(id=904460336118267954))
 
     @tasks.loop(seconds=20.0)
