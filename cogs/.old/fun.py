@@ -1,11 +1,5 @@
 import discord
-import time
-import random
-import pytube
-import binascii
-import os
 
-from discord import app_commands
 from discord.ext import commands
 
 mp4path = 'cache/mp4dl'

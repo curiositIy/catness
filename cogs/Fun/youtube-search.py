@@ -1,12 +1,13 @@
 import urllib.parse
 import urllib.request
 import re
+
 import discord
 
 from pytube import YouTube
 from discord.ext import commands
 from discord import app_commands
-from discord.ui import Select, View
+from discord.ui import View
 
 
 def search(query):

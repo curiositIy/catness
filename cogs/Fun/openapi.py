@@ -1,14 +1,14 @@
-import discord
-import openai
-import asyncio
-import requests
 import io
 
+import discord
+import openai
+
+from typing import Literal
+
 from discord import ui
-from sakana import OPENAI
 from discord import app_commands
 from discord.ext import commands
-from typing import Literal
+
 
 
 async def pedit(prompt, instructions, temp=0.5):

@@ -1,9 +1,6 @@
 import discord
+
 from discord.ext import commands
-from discord import app_commands
-from datetime import timedelta
-import datetime
-import time
 
 
 class Mod(commands.Cog):
