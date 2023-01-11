@@ -22,7 +22,6 @@ ce = Bot()
 
 
 async def load():
-
     await ce.load_extension("jishaku")
     await ce.load_extension("Cogs.events")
     print("🟪 initial extensions loaded")
